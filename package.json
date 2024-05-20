@@ -1,9 +1,9 @@
 {
-  "name": "nope.db",
-  "author": "nopeion",
-  "version": "0.0.9",
+  "name": "nope.db-nl",
+  "author": "nopeion, modded by xiaom1hype",
+  "version": "1.0.0",
   "license": "MIT",
-  "description": "nope.db simple JSON database for nodejs.",
+  "description": "nope.db simple JSON database for nodejs. Version without stupid limitations (ID not valid)",
   "main": "./src/app.js",
   "scripts": {
     "start": "node ./src/app.js",

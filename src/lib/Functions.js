@@ -9,7 +9,8 @@ function stringifyData(data) {
     return data;
 };
 function validID(id) {
-    if (typeof id !== "string" || id.length < 1 || !id.match(/^[a-zA-Z0-9\.]+$/)) return false;
+    // if (typeof id !== "string" || id.length < 1 || !id.match(/^[a-zA-Z0-9\.]+$/)) return false;
+    // yes thats it you prolly know this "patch"
     return true;
 };
 function validValue(value) {
