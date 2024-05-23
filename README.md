@@ -1,15 +1,15 @@
 <img src="https://i.ibb.co/C1vZ1j9/nope-db.png" alt="nope.db" />
 
-[![nope.db](https://img.shields.io/badge/nope-db-red.svg)](https://www.npmjs.org/package/nope.db)
-[![npm version](https://img.shields.io/npm/v/nope.db.svg?style=flat-square)](https://www.npmjs.org/package/nope.db)
-[![install size](https://packagephobia.now.sh/badge?p=nope.db)](https://packagephobia.now.sh/result?p=nope.db)
-[![npm downloads](https://img.shields.io/npm/dm/nope.db.svg?style=flat-square)](http://npm-stat.com/charts.html?package=nope.db)
-[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jesuswasmychoice/nope.db/blob/main/LICENSE)
+[![nope.db](https://img.shields.io/badge/nope-db-red.svg)](https://www.npmjs.org/package/nope.db-nl)
+[![npm version](https://img.shields.io/npm/v/nope.db.svg?style=flat-square)](https://www.npmjs.org/package/nope.db-nl)
+[![install size](https://packagephobia.now.sh/badge?p=nope.db)](https://packagephobia.now.sh/result?p=nope.db-nl)
+[![npm downloads](https://img.shields.io/npm/dm/nope.db.svg?style=flat-square)](http://npm-stat.com/charts.html?package=nope.db-nl)
+[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jotkauser/nope.db-nl/blob/0.0.9/LICENSE)
 [![Discord](https://img.shields.io/discord/747043879726874734?color=%237289DA&label=Discord)](https://discord.gg/trDF8fb)
 
 > Simple, convenient JSON database for nodejs.
 
-Released v0.0.9 now. You can see changes on [changelog](https://github.com/jesuswasmychoice/nope.db/blob/main/CHANGELOG.md).
+Version 1.0.1, added .splice() STILL BUGGY. DON'T USE IN PRODUCTION PROJECTS
 <hr>
 
 # Getting Started
@@ -32,21 +32,20 @@ const db = new nopedb({
 
 # Documentation
 
-- [new nopeDB(settings)](#nopeDB)
-  - add(id, value)
-  - all()
-  - clear()
-    - reset()
-  - delete(id)
-    - remove(id)
-  - get(id)
-    - fetch(id)
-  - has(id)
-  - push(id, value)
-  - set(id, value)
-  - subtract(id, value)
-- [DatabaseError](#DatabaseError)
-
+- [Getting Started](#getting-started)
+- [Documentation](#documentation)
+  - [new nopeDB(settings)](#new-nopedbsettings)
+  - [Methods](#methods)
+    - [add(id, value)](#addid-value)
+    - [all()](#all)
+    - [clear(id)](#clearid)
+    - [delete(id)](#deleteid)
+    - [get(id)](#getid)
+    - [has(id)](#hasid)
+    - [push(id, value)](#pushid-value)
+    - [set(id, value)](#setid-value)
+    - [subtract(id, value)](#subtractid-value)
+  - [DatabaseError](#databaseerror)
 ## new nopeDB(settings)
 <div class="nopeDB"></div>
 

@@ -128,6 +128,9 @@ class db {
     push(id, value) {
         return this.methods.push(id, value);
     };
+    splice(id, index) {
+        return this.methods.splice(id, index);
+    }
     /**
      * Sets the value of an element in the database
      * @param {string} id The ID of the element

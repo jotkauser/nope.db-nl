@@ -17,6 +17,7 @@ class Utils {
             undefinedFileName: "Undefined file name",
             undefinedID: "Undefined ID",
             undefinedValue: "Undefined value",
+            noSuchObjectArray: "No object in array"
         }
     };
     read() {
@@ -137,6 +138,17 @@ class Utils {
         array.push(value);
         return this._set(id, array) ? this.get(id) : null;
     };
+    splice(id, index) {
+        if (!id) throw new DatabaseError(this.errors.undefinedID);
+        if (!validID(id)) throw new DatabaseError(this.errors.nonValidID);
+        // if (!index) throw new DatabaseError(this.errors.undefinedValue);
+        // in case if the index is zero
+        if (!this.get(id) || this.get(id).length < 1) return this._set(id, [value]) ? this.get(id) : null;
+        if (!isArray(this.get(id))) throw new DatabaseError(this.errors.mustBeArray);
+        var array = this.get(id);
+        array.splice(index, 1);
+        return this._set(id, array) ? this.get(id) : null;
+    }
     backup(fileName) {
         if (!fileName) throw new DatabaseError(this.errors.undefinedFileName);
         try {
