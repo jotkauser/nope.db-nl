@@ -9,7 +9,7 @@
 
 > Simple, convenient JSON database for nodejs.
 
-Version 1.0.2, splice seems to be working fine.
+Version 1.0.3, splice seems to be working fine.
 <hr>
 
 # Getting Started
