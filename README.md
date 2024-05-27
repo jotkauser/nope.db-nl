@@ -2,9 +2,8 @@
 
 [![nope.db](https://img.shields.io/badge/nope-db-red.svg)](https://www.npmjs.org/package/nope.db-nl)
 [![npm version](https://img.shields.io/npm/v/nope.db-nl.svg?style=flat-square)](https://www.npmjs.org/package/nope.db-nl)
-[![install size](https://packagephobia.now.sh/badge?p=nope.db)](https://packagephobia.now.sh/result?p=nope.db-nl)
-[![npm downloads](https://img.shields.io/npm/dm/nope.db.svg?style=flat-square)](http://npm-stat.com/charts.html?package=nope.db-nl)
-[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jotkauser/nope.db-nl/blob/0.0.9/LICENSE)
+[![npm downloads](https://img.shields.io/npm/dm/nope.db-nl.svg?style=flat-square)](http://npm-stat.com/charts.html?package=nope.db-nl)
+[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jotkauser/nope.db-nl/blob/main/LICENSE)
 [![Discord](https://img.shields.io/discord/747043879726874734?color=%237289DA&label=Discord)](https://discord.gg/trDF8fb)
 
 > Simple, convenient JSON database for nodejs.
@@ -20,7 +19,7 @@ $ npm install nope.db-nl
 ```
 Usage of nope.db
 ```js
-const nopedb = require("nope.db");
+const nopedb = require("nope.db-nl");
 const db = new nopedb({
     path: "./path/of/database.json",
     seperator: ".", // optional

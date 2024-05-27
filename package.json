@@ -1,7 +1,7 @@
 {
   "name": "nope.db-nl",
   "author": "nopeion, modded by xiaom1hype",
-  "version": "1.0.3.1",
+  "version": "1.0.30",
   "license": "MIT",
   "description": "nope.db mod with continued development.",
   "main": "./src/app.js",
