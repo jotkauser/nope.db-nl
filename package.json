@@ -3,7 +3,7 @@
   "author": "nopeion, modded by xiaom1hype",
   "version": "1.0.2",
   "license": "MIT",
-  "description": "nope.db simple JSON database for nodejs. Version without stupid limitations (ID not valid)",
+  "description": "nope.db mod with continued development.",
   "main": "./src/app.js",
   "scripts": {
     "start": "node ./src/app.js",
