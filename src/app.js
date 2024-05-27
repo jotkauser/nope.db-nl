@@ -31,12 +31,13 @@ class db {
         if (!settings.path.endsWith(".json"))
             throw new DatabaseError("This path does not output to a json file");
         // Spaces
+        settings.spaces = 2
         if (settings.spaces && typeof settings.spaces !== "number")
             throw new DatabaseError("The spaces of the database file is must be an number")
         else if (!settings.spaces) settings.spaces = 0;
         // Seperator
         if (!settings.seperator)
-            throw new DatabaseError("The seperator is required");
+            settings.seperator = ","
         if (typeof settings.seperator !== "string")
             throw new DatabaseError("The seperator must be an string");
         if (!Punctuation.test(settings.seperator))
@@ -128,6 +129,14 @@ class db {
     push(id, value) {
         return this.methods.push(id, value);
     };
+    /**
+     * Splices the data in a array from database
+     * @param {string} id The ID of the element
+     * @param {number} index The index number to splice
+     * @returns {array} The updated array
+     * @throws {DatabaseError} If no value is provided
+     * Not specifying a index should work like if you set 0
+     */
     splice(id, index) {
         return this.methods.splice(id, index);
     }

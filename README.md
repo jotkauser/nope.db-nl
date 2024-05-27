@@ -9,22 +9,22 @@
 
 > Simple, convenient JSON database for nodejs.
 
-Version 1.0.1, added .splice() STILL BUGGY. DON'T USE IN PRODUCTION PROJECTS
+Version 1.0.3, splice seems to be working fine.
 <hr>
 
 # Getting Started
 
 Installing the npm package
 ```console
-$ npm install nope.db
+$ npm install nope.db-nl
 ```
 Usage of nope.db
 ```js
 const nopedb = require("nope.db");
 const db = new nopedb({
     path: "./path/of/database.json",
-    seperator: ".",
-    spaces: 2
+    seperator: ".", // optional
+    spaces: 2 // optional 
 });
 ```
 
@@ -43,6 +43,7 @@ const db = new nopedb({
     - [get(id)](#getid)
     - [has(id)](#hasid)
     - [push(id, value)](#pushid-value)
+    - [splice(id,index)](#spliceidindex)
     - [set(id, value)](#setid-value)
     - [subtract(id, value)](#subtractid-value)
   - [DatabaseError](#databaseerror)
@@ -53,12 +54,11 @@ Creates or gets a database file
 - **Params:**
   - **settings** - An object with the settings
     - **settings.path** - The path of the database (must be an absolute path / the folder should be created) 
-    - **settings.seperator** - Seperator for the ID's
-    - **settings.spaces** - The spaces of the database file
+    - **settings.seperator** - Seperator for the ID's (Default: ,)
+    - **settings.spaces** - The spaces of the database file (Default: 2)
 - **Throws:** [DatabaseError()](#DatabaseError) - If there are no settings or any settings are invalid
 
 ## Methods
-
 ### add(id, value)
 Adds the value of an element in the database
 - **Params:**
@@ -104,13 +104,21 @@ Pushs the data in a array from database
 - **Returns:** **Array** - The array of the ID
 - **Throws:** [DatabaseError()](#DatabaseError) - If the ID or value is invalid
 
+### splice(id,index)
+Splices the data in a array from database
+- **Params:**
+  - **id** - The ID of the element
+  - **index** - The index number to splice
+- **Returns:** **Array** - The updated array
+- **Throws:** [DatabaseError()](#DatabaseError) - If the ID is invalid
+
 ### set(id, value)
 Sets the value of an element in the database
 - **Params:**
   - **id** - The ID of the element
   - **value** - The value to be setted
 - **Returns:** * - The value setted
-- **Throws:** [DatabaseError()](#DatabaseError) - If the ID or value is invalid
+- **Throws:** [DatabaseError()](#DatabaseError) - If the ID is invalid
 
 ### subtract(id, value)
 Subtracts the value of an element in the database

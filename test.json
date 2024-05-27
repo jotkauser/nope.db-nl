@@ -1,8 +1,3 @@
 {
-  "test": [
-    {
-      "test": "testing"
-    },
-    "test2"
-  ]
+  "test": []
 }
